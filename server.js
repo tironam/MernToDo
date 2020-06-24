@@ -12,7 +12,7 @@ app.get('*', (req, res) => {
     res.sendFile(join(__dirname, 'client', 'build', 'index.html'))
 })
 
-require('mongoose').createConnection('mongodb://localhost/tododb', {
+require('mongoose').connect('mongodb://localhost/tododb', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
